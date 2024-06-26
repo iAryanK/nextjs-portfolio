@@ -83,7 +83,7 @@
 @layer utilities {
 
   .heading {
-    @apply font-bold text-5xl md:text-7xl text-center bg-gradient-to-t from-yellow-500 to-yellow-200 dark:from-yellow-300 dark:to-yellow-50 bg-clip-text text-transparent;
+    @apply font-bold text-5xl md:text-7xl text-center bg-gradient-to-t from-yellow-500 to-yellow-200 dark:from-yellow-300 dark:to-yellow-50 bg-clip-text text-transparent select-none;
   }
 
   .secondaryHeading {

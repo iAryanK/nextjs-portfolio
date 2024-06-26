@@ -33,7 +33,7 @@ const Progress = React.forwardRef<
         background="transparent"
         minSize={2.0}
         maxSize={3.0}
-        particleDensity={200}
+        particleDensity={100}
         className="h-full w-full absolute pr-2"
         particleColor="#FFFFFF"
       />

@@ -4,9 +4,7 @@ import Hero from "@/components/Hero";
 import Intro from "@/components/Intro";
 import Skills from "@/components/Skills";
 import { navItems } from "@/data";
-import Image from "next/image";
 import Projects from "@/components/Projects";
-import { Button } from "@/components/ui/button";
 
 export default function Home() {
   return (
@@ -21,7 +19,6 @@ export default function Home() {
         <Skills />
         <Projects />
         <Testimonials />
-        <Footer />
       </div>
     </main>
   );

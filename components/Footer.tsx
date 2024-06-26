@@ -8,7 +8,7 @@ const Footer = () => {
   return (
     <footer
       id="contact"
-      className="max-w-7xl mx-auto sm:px-10 px-5 pt-20 pb-10 max-md:mx-10"
+      className="max-w-7xl mx-auto sm:px-10 px-5 pt-20 pb-10 max-md:mx-10 relative"
     >
       <div
         className="h-[90vh] sm:h-screen w-full

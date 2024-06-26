@@ -14,7 +14,7 @@ const Intro = () => {
           background="transparent"
           minSize={1.0}
           maxSize={1.6}
-          particleDensity={100}
+          particleDensity={20}
           className="h-full"
           particleColor="#60AFFF"
         />
@@ -25,8 +25,8 @@ const Intro = () => {
         <div className="max-sm:ml-3 font-semibold text-3xl lg:text-5xl">
           Hello! I am Aryan,
         </div>
-        <div className="lg:text-justify text-start text-2xl lg:text-4xl my-5 max-sm:ml-3">
-          <p className="leading-snug max-sm:font-light max-sm:text-justify">
+        <div className="text-2xl lg:text-4xl my-5 max-sm:ml-3">
+          <p className="leading-snug max-sm:font-extralight  text-neutral-500 dark:text-neutral-400">
             A Computer Science Undergraduate, currently pursuing the degree of
             Bachelor of Technology. I am in third year of my four years course
             duration. <br /> My hobbies and interests include Programming,
