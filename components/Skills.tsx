@@ -14,10 +14,10 @@ import {
   languageSkills,
 } from "@/data";
 import Image from "next/image";
-import { getQuotation2 } from "@/lib/actions/quote.action";
+import { getQuotation } from "@/lib/actions/quote.action";
 
 const Skills = async () => {
-  const quote = await getQuotation2();
+  const quote = await getQuotation();
 
   return (
     <section className="max-w-7xl mx-auto sm:px-10 px-5 pt-10 max-md:mx-10 mb-14">
@@ -156,8 +156,8 @@ const Skills = async () => {
       </div>
 
       <p className="text-xl sm:text-2xl font-light max-w-2xl mx-auto text-center mb-5">
-        &quot;{quote.q}&quot; -{" "}
-        <i className="text-xl sm:text-2xl font-extralight">{quote.a}</i>
+        &ldquo; {quote.quote} &rdquo; -{" "}
+        <i className="text-xl sm:text-2xl font-extralight">{quote.author}</i>
       </p>
       <div className="w-[20%] h-[1px] border border-gray-400 mx-auto mb-10"></div>
 

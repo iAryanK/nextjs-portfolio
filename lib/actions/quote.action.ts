@@ -1,14 +1,10 @@
 "use server";
 
-export async function getQuotation2() {
-  const data = await fetch("https://zenquotes.io/api/quotes", {
-    next: { revalidate: 3600 },
-  });
-  const quotes = await data.json();
+import { quotes } from "@/data/quotes";
 
-  const lengthOfQuotes = quotes.length;
-  const randomIdx = Math.floor(Math.random() * lengthOfQuotes);
+export async function getQuotation() {
+  const randomIndex = Math.floor(Math.random() * quotes.length);
+  const randomQuote = quotes[randomIndex];
 
-  console.log(quotes[randomIdx]);
-  return quotes[randomIdx];
+  return randomQuote;
 }

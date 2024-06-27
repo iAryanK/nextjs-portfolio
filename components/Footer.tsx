@@ -6,10 +6,7 @@ import Link from "next/link";
 
 const Footer = () => {
   return (
-    <footer
-      id="contact"
-      className="max-w-7xl mx-auto sm:px-10 px-5 pt-20 pb-10 max-md:mx-10 relative"
-    >
+    <footer id="contact" className="max-w-full mx-auto pt-20 pb-10 relative">
       <div
         className="h-[90vh] sm:h-screen w-full
        absolute bottom-0 left-0 right-0 z-0"
@@ -19,7 +16,7 @@ const Footer = () => {
         </div>
       </div>
 
-      <div className="flex flex-col items-center">
+      <div className="max-w-7xl mx-auto sm:px-10 px-5  flex flex-col items-center">
         <h1 className="heading pb-5">Found my Portfolio really amazing ?</h1>
         <p className="text-white-200 md:mt-10 my-5 text-center max-md:mx-5  lg:max-w-[45vw]">
           Reach out to me today and let&apos;s discuss how I can help <i>you</i>{" "}
@@ -31,7 +28,7 @@ const Footer = () => {
         </div>
       </div>
 
-      <div className="flex mt-16 flex-row justify-between items-center">
+      <div className="flex mt-16 flex-row justify-between items-center max-w-7xl mx-auto sm:px-10 px-5">
         <p className="md:text-base text-sm md:font-normal font-light">
           Copyright &copy; 2024 Aryan
         </p>

@@ -10,6 +10,7 @@ import { cn } from "@/utils/cn";
 import Link from "next/link";
 import { ModeToggle } from "./ModeToggle";
 import MobileNav from "./MobileNav";
+import { Home, Laptop2, Mail, NotebookText, User } from "lucide-react";
 
 export function Navbar() {
   return (
@@ -43,6 +44,7 @@ function Navigationbar({ className }: { className?: string }) {
                   setActive={setActive}
                   active={active}
                   item="Home"
+                  img={<Home size={18} />}
                 ></MenuItem>
               </Link>
 
@@ -51,11 +53,17 @@ function Navigationbar({ className }: { className?: string }) {
                   setActive={setActive}
                   active={active}
                   item="About"
+                  img={<User size={18} />}
                 ></MenuItem>
               </Link>
 
               <Link href="#projects">
-                <MenuItem setActive={setActive} active={active} item="Projects">
+                <MenuItem
+                  setActive={setActive}
+                  active={active}
+                  item="Projects"
+                  img={<Laptop2 size={18} />}
+                >
                   <div className="text-sm grid grid-cols-2 gap-10 p-4">
                     <ProductItem
                       title="Uniport"
@@ -86,7 +94,12 @@ function Navigationbar({ className }: { className?: string }) {
               </Link>
 
               <Link href="#contact">
-                <MenuItem setActive={setActive} active={active} item="Contact">
+                <MenuItem
+                  setActive={setActive}
+                  active={active}
+                  item="Contact"
+                  img={<Mail size={18} />}
+                >
                   <div className="flex flex-col space-y-4 text-sm">
                     <HoveredLink href="https://www.linkedin.com/in/iaryan/">
                       LinkedIn
@@ -108,6 +121,7 @@ function Navigationbar({ className }: { className?: string }) {
                   setActive={setActive}
                   active={active}
                   item="Blogs"
+                  img={<NotebookText size={18} />}
                 ></MenuItem>
               </Link>
             </Menu>

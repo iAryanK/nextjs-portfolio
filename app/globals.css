@@ -90,4 +90,20 @@
     @apply font-bold text-3xl md:text-5xl text-center bg-gradient-to-b from-cyan-200 to-cyan-500 dark:from-cyan-50 dark:to-cyan-300 bg-clip-text text-transparent;
   }
 
+  .paraHead {
+    @apply mt-8 mb-5 font-semibold text-2xl text-black dark:text-white
+  }
+
+  .paraHeadSecondary {
+    @apply mt-5 mb-3 font-semibold text-xl text-black dark:text-white
+  }
+
+  .highlight {
+    @apply font-semibold text-[#14af40] dark:text-[#0ae448]
+  }
+
+  .blogContent {
+    @apply leading-relaxed text-lg text-[#868562] dark:text-[#BBBAA6]
+  }
+
 }

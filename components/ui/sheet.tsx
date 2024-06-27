@@ -71,6 +71,9 @@ const SheetContent = React.forwardRef<
           height={32}
           width={32}
           alt="close"
+          priority
+          quality={50}
+          unoptimized
         />
         <span className="sr-only">Close</span>
       </SheetPrimitive.Close>
