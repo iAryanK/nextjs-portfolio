@@ -4,7 +4,7 @@ import { FaGithub, FaLinkedinIn, FaXTwitter } from "react-icons/fa6";
 export const navItems = [
   { name: "Home", link: "/", icon: Home },
   { name: "About", link: "/about", icon: User },
-  { name: "Projects", link: "#projects", icon: Laptop2 },
+  { name: "Projects", link: "/projects", icon: Laptop2 },
   { name: "Contact", link: "#contact", icon: Mail },
   { name: "Blogs", link: "/blogs", icon: NotebookText },
 ];

@@ -1,4 +1,5 @@
 import { BackgroundGradientAnimation } from "@/components/aceternity/BgGradient";
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Badge } from "@/components/ui/badge";
 import { socialMedia } from "@/data";
 import { Linkedin, LocateIcon, Mail, MapPin } from "lucide-react";
@@ -21,12 +22,13 @@ const Page = () => {
       </BackgroundGradientAnimation>
 
       <div className="ml-5 h-24 w-24 sm:h-48 sm:w-48 relative -top-12 sm:-top-20">
-        <Image
-          src="/images/profile_photo.jpg"
-          alt="profile picture"
-          fill
-          className="rounded-2xl border-[2px] border-zinc-400 absolute z-20 hover:scale-105 transition ease-in-out shadow-zinc-700 shadow-2xl"
-        />
+        <Avatar className="rounded-2xl border-[2px] border-zinc-400 absolute z-20 hover:scale-105 transition ease-in-out shadow-zinc-700 shadow-2xl h-24 w-24 sm:h-48 sm:w-48">
+          <AvatarImage src="/images/profile_photo.jpg" />
+          <AvatarFallback className="rounded-2xl uppercase tracking-widest text-lg font-light">
+            Aryan
+          </AvatarFallback>
+        </Avatar>
+
         <h1 className="-bottom-12 absolute sm:ml-5 secondaryHeading">Aryan</h1>
       </div>
 

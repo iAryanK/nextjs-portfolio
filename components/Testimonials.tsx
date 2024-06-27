@@ -18,7 +18,7 @@ const Skills = () => {
   const plugin = useRef(Autoplay({ delay: 3000, stopOnInteraction: true }));
 
   return (
-    <section className="max-w-7xl mx-auto sm:px-10 px-5 pt-10 max-md:mx-10">
+    <section className="max-w-7xl mx-auto sm:px-10 px-5 pt-10 mt-5 max-md:mx-10">
       <h1 className="heading">Kind words from Satisfied Clients</h1>
 
       <Carousel

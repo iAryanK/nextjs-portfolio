@@ -17,7 +17,7 @@ export default function Home() {
         <Hero />
         <Intro />
         <Skills />
-        <Projects />
+        <Projects className="max-md:mx-10" heading="Recent Project Works" />
         <Testimonials />
       </div>
     </main>

@@ -57,7 +57,7 @@ function Navigationbar({ className }: { className?: string }) {
                 ></MenuItem>
               </Link>
 
-              <Link href="#projects">
+              <Link href="/projects">
                 <MenuItem
                   setActive={setActive}
                   active={active}

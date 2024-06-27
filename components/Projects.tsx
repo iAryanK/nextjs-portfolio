@@ -5,13 +5,19 @@ import React from "react";
 import { FaLocationArrow } from "react-icons/fa";
 import Divider from "./shared/Divider";
 
-const Projects = () => {
+const Projects = ({
+  className,
+  heading,
+}: {
+  className?: string;
+  heading?: string;
+}) => {
   return (
     <section
       id="projects"
-      className="max-w-7xl mx-auto sm:px-10 px-5 pt-10 max-md:mx-10 mb-14"
+      className={`max-w-7xl mx-auto sm:px-10 px-5 pt-10 ${className}`}
     >
-      <h1 className="heading pb-5 mb-20">Recent Project Works</h1>
+      <h1 className="heading pb-5 mb-20">{heading}</h1>
 
       <div className="flex flex-col gap-10">
         {projects.map(({ id, title, des, img, iconLists, link }) => (
