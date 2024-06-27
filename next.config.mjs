@@ -5,8 +5,11 @@ const nextConfig = {
     images: {
         remotePatterns: [
             {
-                hostname: 'github.com'
-            }
+                hostname: 'github.com',
+            },
+            {
+                hostname: 'api.microlink.io',
+            },
         ]
     }
 };
