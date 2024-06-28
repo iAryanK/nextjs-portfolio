@@ -98,6 +98,14 @@
     @apply mt-5 mb-3 font-semibold text-xl text-black dark:text-white
   }
 
+  .blogHead {
+    @apply mt-8 mb-5 font-semibold text-2xl md:text-4xl text-black dark:text-white
+  }
+
+  .blogHeadSecondary {
+    @apply mt-5 mb-3 font-semibold text-xl md:text-2xl text-black dark:text-white
+  }
+
   .highlight {
     @apply font-semibold text-[#14af40] dark:text-[#0ae448]
   }

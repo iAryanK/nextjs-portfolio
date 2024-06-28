@@ -60,8 +60,8 @@ const Testimonials = () => {
             </CarouselItem>
           ))}
         </CarouselContent>
-        <CarouselPrevious className="max-sm:hidden" />
-        <CarouselNext className="max-sm:hidden" />
+        <CarouselPrevious />
+        <CarouselNext />
       </Carousel>
 
       <Divider />

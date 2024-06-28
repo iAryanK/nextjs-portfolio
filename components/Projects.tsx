@@ -25,8 +25,8 @@ const Projects = ({
         scrollTrigger: {
           trigger: projectsRef.current,
           markers: false,
-          start: "top 80%",
-          end: "top 50%",
+          start: "top 90%",
+          end: "top 60%",
           scrub: 2,
         },
       });
@@ -105,7 +105,7 @@ const Projects = ({
                 alt="Project1"
                 height={700}
                 width={700}
-                className={`rounded-lg shadow-2xl shadow-black-200 dark:shadow-slate-800 ${
+                className={`rounded-lg shadow-2xl shadow-black-200 dark:shadow-slate-800 transition ease-in-out ${
                   id % 2 === 1
                     ? "-rotate-3 hover:-rotate-2"
                     : "rotate-3 hover:rotate-2"

@@ -1,11 +1,13 @@
 import { BackgroundGradientAnimation } from "@/components/aceternity/BgGradient";
 import { LinkPreview } from "@/components/aceternity/LinkPreview";
-import { AllBlogs } from "@/data/blogs";
+import { getBlogs } from "@/lib/actions/blog.action";
 import { ExternalLink } from "lucide-react";
 
-const Blogs = () => {
+const Blogs = async () => {
+  const AllBlogs = await getBlogs();
+
   return (
-    <div className="max-w-7xl mx-auto  px-3 mt-28">
+    <div className="max-w-7xl mx-auto  px-3 mt-28 scroll-mt-24">
       <BackgroundGradientAnimation
         containerClassName="h-28 sm:h-40 rounded-xl"
         size="24px"
@@ -18,23 +20,23 @@ const Blogs = () => {
       </BackgroundGradientAnimation>
 
       <div className="mt-10">
-        {AllBlogs.map((blog) => (
-          <div key={blog.id}>
+        {AllBlogs.map((blog, i) => (
+          <div key={i}>
             <div className="flex items-center justify-between">
               <p className="text-7xl mx-5 text-[#646345] dark:text-[#d3d2c5] max-lg:hidden">
-                {blog.id}
+                {i + 1}
               </p>
               <div className="text-xl md:text-3xl max-w-4xl mx-auto my-10">
                 <LinkPreview
-                  url={blog.url}
-                  imageSrc={blog.hoverImg}
+                  url={`/blogs/${blog.slug}`}
+                  imageSrc={blog.frontmatter.img}
                   isStatic
                   className="text-[#868562] dark:text-[#BBBAA6]"
                 >
-                  {blog.heading}
+                  {blog.frontmatter.title}
                   <div className="flex items-center justify-between mt-4">
                     <div className="font-medium text-lg ml-2 text-[#14af40] dark:text-[#0ae448]">
-                      {blog.date}
+                      {blog.frontmatter.date}
                     </div>
                     <p className="font-normal text-base mr-5 text-[#14af40] dark:text-[#0ae448] xl:hidden flex items-center justify-center cursor-pointer">
                       Read More <ExternalLink className="ml-2" size={14} />

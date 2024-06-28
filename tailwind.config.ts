@@ -8,11 +8,12 @@ const {
 const config = {
   darkMode: ["class"],
   content: [
-    "./pages/**/*.{ts,tsx}",
-    "./components/**/*.{ts,tsx}",
-    "./app/**/*.{ts,tsx}",
-    "./src/**/*.{ts,tsx}",
-    "./data/**/*.{ts,tsx}",
+    "./pages/**/*.{ts,tsx,md,mdx}",
+    "./components/**/*.{ts,tsx,md,mdx}",
+    "./app/**/*.{ts,tsx,md,mdx}",
+    "./src/**/*.{ts,tsx,md,mdx}",
+    "./data/**/*.{ts,tsx,md,mdx}",
+    "./mdx-components.tsx",
   ],
   prefix: "",
   theme: {
@@ -160,7 +161,11 @@ const config = {
       },
     },
   },
-  plugins: [require("tailwindcss-animate"), addVariablesForColors],
+  plugins: [
+    require("tailwindcss-animate"),
+    addVariablesForColors,
+    require("@tailwindcss/typography"),
+  ],
 } satisfies Config;
 
 function addVariablesForColors({ addBase, theme }: any) {
