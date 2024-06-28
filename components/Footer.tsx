@@ -1,56 +1,13 @@
-"use client";
-
-import React, { useRef } from "react";
+import React from "react";
 import { socialMedia } from "@/data";
 import { ContactDrawerDialog } from "./ContactDialog";
 import Link from "next/link";
-import { useGSAP } from "@gsap/react";
-import gsap from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
-gsap.registerPlugin(ScrollTrigger);
 
 const Footer = () => {
-  const footerRef = useRef(null);
-
-  useGSAP(
-    () => {
-      let tl = gsap.timeline({
-        scrollTrigger: {
-          trigger: footerRef.current,
-          markers: false,
-          start: "top 90%",
-          end: "top 70%",
-          scrub: 2,
-        },
-      });
-
-      tl.from(footerRef.current, {
-        opacity: 0,
-        duration: 1,
-      });
-
-      tl.from("h2", {
-        y: 50,
-        scale: 0,
-        opacity: 0,
-        duration: 0.5,
-      });
-
-      tl.from(".gbody", {
-        y: 50,
-        opacity: 0,
-        delay: 0.5,
-        duration: 0.5,
-      });
-    },
-    { scope: footerRef }
-  );
-
   return (
     <footer
       id="contact"
-      ref={footerRef}
-      className="max-w-full mx-auto pt-16 pb-10 relative"
+      className="max-w-full mx-auto pt-16 pb-10 relative bg-black"
     >
       <div
         className="h-[90vh] sm:h-screen w-full
@@ -61,7 +18,7 @@ const Footer = () => {
         </div>
       </div>
 
-      <div className="max-w-7xl mx-auto sm:px-10 px-5  flex flex-col items-center gbody">
+      <div className="max-w-7xl mx-auto sm:px-10 px-5  flex flex-col items-center">
         <h2 className="heading pb-5">Found my Portfolio really amazing ?</h2>
         <p className="text-white-200 md:mt-10 my-5 text-center max-md:mx-5  lg:max-w-[45vw]">
           Reach out to me today and let&apos;s discuss how I can help <i>you</i>{" "}
