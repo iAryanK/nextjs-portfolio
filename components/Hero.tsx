@@ -6,8 +6,27 @@ import { FaLocationArrow } from "react-icons/fa";
 import Image from "next/image";
 import Divider from "./shared/Divider";
 import { MagicButton } from "./aceternity/StyledButton";
+import { useGSAP } from "@gsap/react";
+import gsap from "gsap";
 
 const Hero = () => {
+  const imgRef = useRef(null);
+
+  useGSAP(
+    () => {
+      gsap.to("img", {
+        y: -20,
+        rotate: 6,
+        stagger: 2,
+        duration: 5,
+        repeat: -1,
+        yoyo: true,
+        ease: "power1.inOut",
+      });
+    },
+    { scope: imgRef }
+  );
+
   return (
     <section className="max-w-7xl mx-auto sm:px-10 px-5 max-md:mx-10 pt-36">
       <div>
@@ -28,7 +47,7 @@ const Hero = () => {
 
       <div className="flex flex-col justify-center relative mb-14 z-20">
         <div className="flex flex-col items-center justify-center">
-          <div className="relative max-md:mt-14">
+          <div className="relative max-md:mt-14" ref={imgRef}>
             <h1 className="max-w-[89vw] md:max-w-2xl lg:max-w-[80vw] text-[7rem] sm:text-[9rem] md:text-[12rem] lg:text-[15rem] font-semibold bg-gradient-to-r from-yellow-600 to-yellow-300 dark:from-yellow-300 dark:to-yellow-50 bg-clip-text text-transparent select-none">
               Aryan
             </h1>
@@ -44,7 +63,7 @@ const Hero = () => {
               alt="hero-designer"
               width={118}
               height={118}
-              className="absolute right-16 bottom-8 -z-10 max-md:w-20 max-md:bottom-4 max-sm:bottom-0"
+              className="absolute right-16 bottom-4 -z-10 max-md:w-20 max-md:bottom-4 max-sm:-bottom-4"
             />
           </div>
 

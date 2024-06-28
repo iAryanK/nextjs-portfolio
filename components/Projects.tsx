@@ -1,9 +1,14 @@
+"use client";
 import { projects } from "@/data";
 import Image from "next/image";
 import Link from "next/link";
-import React from "react";
+import React, { useRef } from "react";
 import { FaLocationArrow } from "react-icons/fa";
 import Divider from "./shared/Divider";
+import { useGSAP } from "@gsap/react";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+gsap.registerPlugin(ScrollTrigger);
 
 const Projects = ({
   className,
@@ -12,14 +17,51 @@ const Projects = ({
   className?: string;
   heading?: string;
 }) => {
+  let projectsRef = useRef(null);
+
+  useGSAP(
+    () => {
+      let tl = gsap.timeline({
+        scrollTrigger: {
+          trigger: projectsRef.current,
+          markers: false,
+          start: "top 80%",
+          end: "top 50%",
+          scrub: 2,
+        },
+      });
+
+      tl.from(projectsRef.current, {
+        opacity: 0,
+        duration: 1,
+      });
+
+      tl.from("h2", {
+        y: 50,
+        scale: 0,
+        opacity: 0,
+        duration: 0.5,
+      });
+
+      tl.from(".gbody", {
+        y: 50,
+        opacity: 0,
+        duration: 0.5,
+        stagger: 1,
+      });
+    },
+    { scope: projectsRef }
+  );
+
   return (
     <section
       id="projects"
+      ref={projectsRef}
       className={`max-w-7xl mx-auto sm:px-10 px-5 pt-10 ${className}`}
     >
-      <h1 className="heading pb-5 mb-20">{heading}</h1>
+      <h2 className="heading pb-5 mb-20">{heading}</h2>
 
-      <div className="flex flex-col gap-10">
+      <div className="flex flex-col gap-10 gbody">
         {projects.map(({ id, title, des, img, iconLists, link }) => (
           <div
             key={id}
@@ -28,7 +70,7 @@ const Projects = ({
             }`}
           >
             <div className="xl:w-1/2 max-xl:w-[90%] flex flex-col items-start mx-5">
-              <h2 className="secondaryHeading pb-8">{title}</h2>
+              <h3 className="secondaryHeading pb-8">{title}</h3>
               <p className="text-justify pb-8 font-extralight text-lg">{des}</p>
 
               <div className="flex flex-row w-full items-center justify-between max-xl:mb-3">

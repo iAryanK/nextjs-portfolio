@@ -13,13 +13,49 @@ import { testimonials } from "@/data";
 import { Card, CardContent } from "./ui/card";
 import Image from "next/image";
 import Autoplay from "embla-carousel-autoplay";
+import { useGSAP } from "@gsap/react";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+gsap.registerPlugin(ScrollTrigger);
 
 const Skills = () => {
   const plugin = useRef(Autoplay({ delay: 3000, stopOnInteraction: true }));
 
+  const testimonialsRef = useRef(null);
+
+  useGSAP(
+    () => {
+      let tl = gsap.timeline({
+        scrollTrigger: {
+          trigger: testimonialsRef.current,
+          markers: false,
+          start: "top 90%",
+          end: "top 70%",
+          scrub: 2,
+        },
+      });
+
+      tl.from(testimonialsRef.current, {
+        opacity: 0,
+        duration: 1,
+      });
+
+      tl.from("h2", {
+        y: 50,
+        scale: 0,
+        opacity: 0,
+        duration: 0.5,
+      });
+    },
+    { scope: testimonialsRef }
+  );
+
   return (
-    <section className="max-w-7xl mx-auto sm:px-10 px-5 pt-10 mt-5 max-md:mx-10">
-      <h1 className="heading">Kind words from Satisfied Clients</h1>
+    <section
+      ref={testimonialsRef}
+      className="max-w-7xl mx-auto sm:px-10 px-5 pt-10 mt-5 max-md:mx-10"
+    >
+      <h2 className="heading">Kind words from Satisfied Clients</h2>
 
       <Carousel
         plugins={[plugin.current]}

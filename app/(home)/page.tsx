@@ -1,10 +1,9 @@
 import Testimonials from "@/components/Testimonials";
-import Footer from "@/components/Footer";
 import Hero from "@/components/Hero";
 import Intro from "@/components/Intro";
 import Skills from "@/components/Skills";
-import { navItems } from "@/data";
 import Projects from "@/components/Projects";
+import Quote from "@/components/Quote";
 
 export default function Home() {
   return (
@@ -17,6 +16,7 @@ export default function Home() {
         <Hero />
         <Intro />
         <Skills />
+        <Quote />
         <Projects className="max-md:mx-10" heading="Recent Project Works" />
         <Testimonials />
       </div>
