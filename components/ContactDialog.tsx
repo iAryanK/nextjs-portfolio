@@ -26,9 +26,9 @@ import { MagicButton } from "./aceternity/StyledButton";
 import { FaLocationArrow } from "react-icons/fa";
 import { Textarea } from "./ui/textarea";
 import { useState } from "react";
-import { sendMail } from "@/app/api/send/route";
 import { useToast } from "@/components/ui/use-toast";
 import { LoaderCircle } from "lucide-react";
+import { sendMail } from "@/lib/actions/contact.action";
 
 export function ContactDrawerDialog() {
   const [open, setOpen] = useState(false);
