@@ -4,7 +4,7 @@ import React from "react";
 
 const Page = () => {
   return (
-    <div className="mt-20 scroll-mt-24">
+    <div className="pt-20 scroll-pt-24 bg-white dark:bg-black">
       <HeroImagesSlider />
       <Projects heading="All Projects" />
     </div>

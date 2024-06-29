@@ -8,9 +8,17 @@ import {
 } from "@/components/aceternity/NavbarMenu";
 import { cn } from "@/utils/cn";
 import Link from "next/link";
-import { ModeToggle } from "./ModeToggle";
 import MobileNav from "./MobileNav";
-import { Home, Laptop2, Mail, NotebookText, User } from "lucide-react";
+import {
+  Fullscreen,
+  Home,
+  Laptop2,
+  Mail,
+  NotebookText,
+  User,
+} from "lucide-react";
+import FullScreenToggle from "./FullScreenToggle";
+import ThemeToggle from "./ThemeToggle";
 
 export function Navbar() {
   return (
@@ -128,7 +136,8 @@ function Navigationbar({ className }: { className?: string }) {
           </div>
 
           <div className="flex gap-2 items-center justify-center">
-            <ModeToggle />
+            <FullScreenToggle />
+            <ThemeToggle />
             <MobileNav />
           </div>
         </div>

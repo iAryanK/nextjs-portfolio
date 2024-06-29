@@ -7,7 +7,7 @@ const Blogs = async () => {
   const AllBlogs = await getBlogs();
 
   return (
-    <div className="max-w-7xl mx-auto  px-3 mt-28 scroll-mt-24">
+    <div className="max-w-7xl mx-auto  px-3 pt-28 scroll-pt-24 bg-white dark:bg-black">
       <BackgroundGradientAnimation
         containerClassName="h-28 sm:h-40 rounded-xl"
         size="24px"
