@@ -6,6 +6,7 @@ import { Navbar } from "@/components/shared/Navbar";
 import MobileNav from "@/components/shared/MobileNav";
 import Image from "next/image";
 import Footer from "@/components/Footer";
+import { Toaster } from "@/components/ui/toaster";
 
 const poppins = Poppins({
   subsets: ["latin"],
@@ -36,6 +37,7 @@ export default function RootLayout({
           <Navbar />
           {children}
           <Footer />
+          <Toaster />
         </ThemeProvider>
       </body>
     </html>

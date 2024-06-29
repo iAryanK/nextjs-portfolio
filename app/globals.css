@@ -64,6 +64,31 @@
     --input: 240 3.7% 15.9%;
     --ring: 240 4.9% 83.9%;
   }
+
+  /* width */
+  ::-webkit-scrollbar {
+    width: 13px;
+  }
+
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: linear-gradient(180deg, rgba(152, 227, 8, 1) 0%, rgba(255, 255, 255, 1) 100%);
+  }
+
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    /* background: rgb(183, 180, 234); */
+    background-image: url('/images/juicy-rocket.gif');
+    background-position: center bottom, center -40px;
+    background-repeat: no-repeat, no-repeat;
+    background-size: cover;
+    border-radius: 5px;
+  }
+
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    transform: scale(1.5)
+  }
 }
 
 @layer base {

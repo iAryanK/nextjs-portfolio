@@ -26,6 +26,9 @@ import { MagicButton } from "./aceternity/StyledButton";
 import { FaLocationArrow } from "react-icons/fa";
 import { Textarea } from "./ui/textarea";
 import { useState } from "react";
+import { sendMail } from "@/app/api/send/route";
+import { useToast } from "@/components/ui/use-toast";
+import { LoaderCircle } from "lucide-react";
 
 export function ContactDrawerDialog() {
   const [open, setOpen] = useState(false);
@@ -86,6 +89,57 @@ export function ContactDrawerDialog() {
 }
 
 function ProfileForm({ className }: React.ComponentProps<"form">) {
+  const { toast } = useToast();
+  const [isSubmitting, setIsSubmitting] = useState(false);
+
+  const initialvalues = {
+    email: "",
+    note: "",
+  };
+
+  const [data, setData] = useState(initialvalues);
+
+  const handleSubmit = async (e: any) => {
+    setIsSubmitting(true);
+    e.preventDefault();
+
+    if (data.note == "" || data.email == "") {
+      setIsSubmitting(false);
+      return toast({
+        title: "Oops, Something went wrong!",
+        description: "Please enter both the fields.",
+      });
+    }
+
+    if (
+      !data.email.endsWith("@gmail.com") &&
+      !data.email.endsWith("@hotmail.com") &&
+      !data.email.endsWith("@outlook.com")
+    ) {
+      setIsSubmitting(false);
+      return toast({
+        title: "Sorry!",
+        description: "Only gmail, hotmail and outlook Mail IDs are accepted.",
+      });
+    }
+
+    const res = await sendMail({ data });
+    setIsSubmitting(false);
+
+    if (res) {
+      return toast({
+        title: "Thank you!",
+        description: "I will get back to you soon.",
+      });
+      setData(initialvalues);
+    } else {
+      return toast({
+        title: "Apologies!",
+        description: "Something went wrong.",
+      });
+    }
+  };
+
   return (
     <form className={cn("grid items-start gap-4", className)}>
       <div className="grid gap-2">
@@ -95,16 +149,38 @@ function ProfileForm({ className }: React.ComponentProps<"form">) {
         <Input
           type="email"
           id="email"
+          name="email"
           placeholder="No disposable email please 😅"
+          value={data.email}
+          onChange={(e) =>
+            setData({ ...data, [e.target.name]: e.target.value })
+          }
         />
       </div>
       <div className="grid gap-2">
         <Label htmlFor="note" className="text-white">
           Your message
         </Label>
-        <Textarea id="note" placeholder="Write here..." />
+        <Textarea
+          id="note"
+          name="note"
+          placeholder="Write here..."
+          value={data.note}
+          onChange={(e) =>
+            setData({ ...data, [e.target.name]: e.target.value })
+          }
+        />
       </div>
-      <Button type="submit">Send Note</Button>
+      <Button type="submit" onClick={handleSubmit}>
+        {isSubmitting ? (
+          <div className="flex gap-2 items-center justify-center">
+            <LoaderCircle size={18} className="animate-spin-custom" />
+            <p>Sending</p>
+          </div>
+        ) : (
+          <p>Send Note</p>
+        )}
+      </Button>
     </form>
   );
 }
