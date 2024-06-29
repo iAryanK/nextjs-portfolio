@@ -65,7 +65,7 @@ const Intro = () => {
       </div>
 
       <h2 className="heading">Who Am I ?</h2>
-      <div className="mt-20 max-w-7xl mx-auto sm:px-10 px-5 gbody">
+      <div className="mt-20 max-w-7xl mx-auto sm:px-10 xs:px-5 px-2 gbody">
         <div className="max-sm:ml-3 font-semibold text-3xl lg:text-5xl">
           Hello! I am Aryan,
         </div>

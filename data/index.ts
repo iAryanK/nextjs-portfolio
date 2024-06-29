@@ -169,36 +169,36 @@ export const testimonials = [
     quote:
       "Working with Aryan was a great experience. His technical acumen and ability to troubleshoot complex issues were crucial to our project's success.",
     name: "Jyotika Rana",
-    profession: "Frontend Developer",
-    image: "/git.svg",
+    profession: "Fullstack Developer",
+    image: "/images/girl-smiley.png",
   },
   {
     quote:
       "Aryan's passion for technology and commitment to delivering high-quality work make him an exceptional developer. I would gladly work with him again.",
     name: "Veena Pal",
     profession: "UI/UX Designer",
-    image: "/git.svg",
+    image: "/images/girl-smiley.png",
   },
   {
     quote:
       "Aryan brought a wealth of knowledge and experience to our project. His innovative solutions and technical expertise were instrumental in achieving our goals.",
     name: "Ajay Kumar",
     profession: "Cyber Security Analyst",
-    image: "/git.svg",
+    image: "/images/boy-smiley.png",
   },
   {
     quote:
       "I highly recommend Aryan for any development project. His creativity and technical proficiency ensured the delivery of an outstanding product.",
     name: "Aman Kumar Sharma",
-    profession: "Presentation Creator",
-    image: "/git.svg",
+    profession: "Java Developer",
+    image: "/images/boy-smiley.png",
   },
   {
     quote:
       "Aryan's dedication and attention to detail were key factors in the success of our project. His technical skills and problem-solving abilities are top-notch.",
     name: "Banta Singh",
     profession: "Java Developer",
-    image: "/git.svg",
+    image: "/images/boy-smiley.png",
   },
 ];
 

@@ -7,7 +7,7 @@ const Quote = async () => {
 
   return (
     <>
-      <p className="text-xl sm:text-2xl font-light max-w-2xl mx-auto text-center mb-5 max-md:px-10">
+      <p className="text-xl sm:text-2xl font-light max-w-2xl mx-auto text-center mb-5 max-md:px-10 max-xs:px-20">
         &ldquo; {quote.quote} &rdquo; -{" "}
         <i className="text-xl sm:text-2xl font-extralight">{quote.author}</i>
       </p>

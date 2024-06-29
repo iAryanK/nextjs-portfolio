@@ -34,7 +34,7 @@ function Navigationbar({ className }: { className?: string }) {
     <nav className="z-[50] fixed top-0 w-full h-20 border-b backdrop-blur-md md:bg-white/[0.6] md:dark:bg-black/[0.6] border-neutral-200 dark:border-white/[0.1]">
       <div
         className={cn(
-          "fixed inset-x-0 max-w-6xl max-xl:px-10 mx-auto pt-1 z-50",
+          "fixed inset-x-0 max-w-6xl max-xl:px-10 max-xs:px-5 mx-auto pt-1 z-50",
           className
         )}
       >
