@@ -71,11 +71,12 @@ const Intro = () => {
         </div>
         <div className="text-2xl lg:text-4xl my-5 max-sm:ml-3">
           <p className="leading-snug max-sm:font-extralight  text-[#868562] dark:text-[#BBBAA6]">
-            A Computer Science Undergraduate, currently pursuing the degree of
-            Bachelor of Technology. I am in third year of my four years course
-            duration. <br /> My hobbies and interests include Programming,
-            learning new Technologies and working on them. Aspiring to become a
-            &apos;Software Development Engineer&apos;...
+            A final-year Computer Science undergraduate pursuing a Bachelor of
+            Technology. With a passion for programming and a keen interest in
+            exploring new technologies, I am dedicated to continuous learning
+            and innovation. <br /> <br />
+            Aspiring to become a &apos;Software Development Engineer&apos;, my
+            goal is to leverage my skills to create impactful scalable systems.
           </p>
         </div>
         <Link href="/about">

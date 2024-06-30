@@ -57,6 +57,7 @@
     "@types/react": "^18",
     "@types/react-dom": "^18",
     "@types/react-lottie": "^1.2.10",
+    "autoprefixer": "^10.4.19",
     "eslint": "^8",
     "eslint-config-next": "14.2.3",
     "postcss": "^8",

@@ -89,6 +89,11 @@
   ::-webkit-scrollbar-thumb:hover {
     transform: scale(1.5)
   }
+
+  .bg-clip-text {
+    -webkit-background-clip: text;
+    background-clip: text;
+  }
 }
 
 @layer base {
