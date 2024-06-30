@@ -15,9 +15,20 @@ const poppins = Poppins({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://www.iaryan.tech"),
   title: "Aryan | Portfolio",
   description:
     "Welcome to Aryan's portfolio website. Discover my projects, skills, and professional journey. View my resume and contact me for services.",
+  openGraph: {
+    title: "Aryan | Portfolio",
+    description:
+      "Welcome to Aryan's portfolio website. Discover my projects, skills, and professional journey. View my resume and contact me for services.",
+    images: [
+      {
+        url: "https://www.iaryan.tech/opengraph-image.png",
+      },
+    ],
+  },
 };
 
 export default function RootLayout({
