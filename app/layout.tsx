@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Poppins } from "next/font/google";
 import "@/app/globals.css";
 import { ThemeProvider } from "@/components/provider/theme-provider";
@@ -15,6 +15,7 @@ const poppins = Poppins({
 });
 
 export const metadata: Metadata = {
+  manifest: "/manifest.json",
   metadataBase: new URL("https://www.iaryan.tech"),
   title: "Aryan | Portfolio",
   description:
@@ -29,6 +30,10 @@ export const metadata: Metadata = {
       },
     ],
   },
+};
+
+export const viewport: Viewport = {
+  themeColor: "#FFFFFF",
 };
 
 export default function RootLayout({
