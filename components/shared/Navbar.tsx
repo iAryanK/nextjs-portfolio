@@ -9,16 +9,10 @@ import {
 import { cn } from "@/utils/cn";
 import Link from "next/link";
 import MobileNav from "./MobileNav";
-import {
-  Fullscreen,
-  Home,
-  Laptop2,
-  Mail,
-  NotebookText,
-  User,
-} from "lucide-react";
+import { Home, Laptop2, Mail, NotebookText, Share2, User } from "lucide-react";
 import FullScreenToggle from "./FullScreenToggle";
 import ThemeToggle from "./ThemeToggle";
+import { toast } from "../ui/use-toast";
 
 export function Navbar() {
   return (
@@ -30,6 +24,22 @@ export function Navbar() {
 
 function Navigationbar({ className }: { className?: string }) {
   const [active, setActive] = useState<string | null>(null);
+
+  const handleShare = () => {
+    if (!navigator.share) {
+      return toast({
+        title: "Oops, Something went wrong!",
+        description: "Probably, your device doesn't support web share API.",
+      });
+    }
+
+    return navigator.share({
+      title: "Aryan | Portfolio",
+      text: "Visit now, to explore this portfolio.",
+      url: "https://www.iaryan.tech",
+    });
+  };
+
   return (
     <nav className="z-[50] fixed top-0 w-full h-20 border-b backdrop-blur-md md:bg-white/[0.6] md:dark:bg-black/[0.6] border-neutral-200 dark:border-white/[0.1]">
       <div
@@ -138,6 +148,11 @@ function Navigationbar({ className }: { className?: string }) {
           <div className="flex gap-2 items-center justify-center">
             <FullScreenToggle />
             <ThemeToggle />
+            <Share2
+              size={24}
+              className="cursor-pointer hover:scale-110 hover:rotate-12 transition ease-in-out mr-1"
+              onClick={handleShare}
+            />
             <MobileNav />
           </div>
         </div>

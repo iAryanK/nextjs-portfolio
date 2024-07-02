@@ -29,9 +29,15 @@ const ThemeToggle = () => {
   return (
     <Toggle className="rounded-full">
       {!isLight ? (
-        <Sun onClick={enableLightMode} />
+        <Sun
+          onClick={enableLightMode}
+          className="hover:rotate-45 transition ease-in-out"
+        />
       ) : (
-        <Moon onClick={enableDarkMode} />
+        <Moon
+          onClick={enableDarkMode}
+          className="hover:rotate-45 transition ease-in-out"
+        />
       )}
     </Toggle>
   );

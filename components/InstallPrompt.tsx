@@ -35,7 +35,9 @@ const InstallPrompt = () => {
   };
 
   return (
-    <div className={`bg-blue-800 ${showPrompt ? "block" : "hidden"}`}>
+    <div
+      className={`bg-blue-800 rounded-t-md ${showPrompt ? "block" : "block"}`}
+    >
       <div className="flex items-center justify-between max-w-7xl mx-auto py-3 px-5 sm:px-10">
         <div className="max-sm:hidden">
           Install the app to get a native app experience on your PC !

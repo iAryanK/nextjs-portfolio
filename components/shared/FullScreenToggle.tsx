@@ -28,9 +28,15 @@ const FullScreenToggle = () => {
   return (
     <Toggle className="rounded-full">
       {!isFullScreen ? (
-        <Fullscreen onClick={openFullscreen} />
+        <Fullscreen
+          onClick={openFullscreen}
+          className="hover:scale-110 transition ease-in-out"
+        />
       ) : (
-        <Minimize onClick={closeFullscreen} />
+        <Minimize
+          onClick={closeFullscreen}
+          className="hover:scale-110 transition ease-in-out"
+        />
       )}
     </Toggle>
   );
