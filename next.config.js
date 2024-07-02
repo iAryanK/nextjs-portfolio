@@ -2,6 +2,8 @@ const withMDX = require('@next/mdx')()
 
 const withPWA = require('@ducanh2912/next-pwa').default({
     dest: 'public',
+    cacheStartUrl: true,
+    fallbacks: { document: "/" },
     cacheOnFrontendNav: true,
     aggressiveFrontEndNavCaching: true,
     reloadOnOnline: true,

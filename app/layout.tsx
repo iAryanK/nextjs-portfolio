@@ -7,6 +7,7 @@ import MobileNav from "@/components/shared/MobileNav";
 import Image from "next/image";
 import Footer from "@/components/Footer";
 import { Toaster } from "@/components/ui/toaster";
+import InstallPrompt from "@/components/InstallPrompt";
 
 const poppins = Poppins({
   subsets: ["latin"],
@@ -53,6 +54,7 @@ export default function RootLayout({
           <Navbar />
           {children}
           <Footer />
+          <InstallPrompt />
           <Toaster />
         </ThemeProvider>
       </body>
