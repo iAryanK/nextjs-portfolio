@@ -8,6 +8,7 @@ import Divider from "./shared/Divider";
 import { MagicButton } from "./aceternity/StyledButton";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
+import ShareButton from "./ShareButton";
 
 const Hero = () => {
   const imgRef = useRef(null);
@@ -82,8 +83,9 @@ const Hero = () => {
               icon={<FaLocationArrow />}
             />
           </Link>
+          <ShareButton className="sm:hidden mt-10" />
         </div>
-        <Divider className="mt-16" />
+        <Divider className="mt-10" />
       </div>
     </section>
   );
