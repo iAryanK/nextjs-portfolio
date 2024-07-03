@@ -4,6 +4,7 @@ import path from "path";
 import { compileMDX } from "next-mdx-remote/rsc";
 import { Octokit } from "octokit";
 import { revalidatePath } from "next/cache";
+import { Base64 } from "js-base64";
 
 const contentDir = path.join(process.cwd(), "blogs-content");
 
@@ -65,12 +66,12 @@ export async function getBlogContent(slug: string) {
     throw new Error("Expected a file with content.");
   }
 
-  const data = res.data.content;
-  return atob(data);
+  const encoded = res.data.content;
+  const decoded = Base64.decode(encoded);
+  return decoded;
 }
 
 export async function getAllBlogsMetadata() {
-  console.log("called getallblogsmetadata");
   const res = await octokit.request(
     `GET /repos/{owner}/{repo}/contents/{path}`,
     {
@@ -80,8 +81,6 @@ export async function getAllBlogsMetadata() {
     }
   );
 
-  console.log("[RES]", res);
-
   if (Array.isArray(res.data)) {
     throw new Error("Expected a single file, but received an array.");
   }
@@ -90,10 +89,8 @@ export async function getAllBlogsMetadata() {
     throw new Error("Expected a file with content.");
   }
 
-  const data = atob(res.data.content);
-  console.log("[DATA]", data);
-
-  const value = JSON.parse(data);
+  const encoded = res.data.content;
+  const decoded = Base64.decode(encoded);
   revalidatePath("/blogs");
-  return value;
+  return JSON.parse(decoded);
 }

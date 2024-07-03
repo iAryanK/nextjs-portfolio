@@ -1,6 +1,7 @@
 import { getBlogBySlug, getBlogContent } from "@/lib/actions/blog.action";
 import { CustomMDX } from "@/mdx-components";
 import Markdown from "react-markdown";
+import rehypeRaw from "rehype-raw";
 
 export default async function BlogPage({
   params,
@@ -15,7 +16,7 @@ export default async function BlogPage({
     <div className="dark:bg-gradient-to-b dark:from-[#09090B] dark:via-[#09090B] dark:to-black">
       <article className="prose dark:prose-invert max-w-5xl mx-auto pb-10 pt-28 max-md:mx-5 scroll-pt-24 blogContent prose-strong:highlight prose-h1:blogHead prose-h1:pb-10 prose-h2:blogHeadSecondary xl:prose-2xl text-wrap overflow-hidden">
         {/* {blog.content} */}
-        <Markdown>{blog}</Markdown>
+        <Markdown rehypePlugins={[rehypeRaw]}>{blog}</Markdown>
       </article>
     </div>
   );
