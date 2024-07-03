@@ -1,10 +1,12 @@
 import { BackgroundGradientAnimation } from "@/components/aceternity/BgGradient";
 import { LinkPreview } from "@/components/aceternity/LinkPreview";
-import { getBlogs } from "@/lib/actions/blog.action";
+import { getAllBlogsMetadata, getBlogs } from "@/lib/actions/blog.action";
 import { ExternalLink } from "lucide-react";
+import Link from "next/link";
 
 const Blogs = async () => {
-  const AllBlogs = await getBlogs();
+  // const AllBlogs = await getBlogs();
+  const AllBlogs = await getAllBlogsMetadata();
 
   return (
     <div className="bg-white dark:bg-black">
@@ -21,7 +23,7 @@ const Blogs = async () => {
         </BackgroundGradientAnimation>
 
         <div className="mt-10">
-          {AllBlogs.map((blog, i) => (
+          {AllBlogs.map((blog: any, i: number) => (
             <div key={i}>
               <div className="flex items-center justify-between">
                 <p className="text-7xl mx-5 text-[#646345] dark:text-[#d3d2c5] max-lg:hidden">
@@ -30,14 +32,14 @@ const Blogs = async () => {
                 <div className="text-xl md:text-3xl max-w-4xl mx-auto my-10">
                   <LinkPreview
                     url={`/blogs/${blog.slug}`}
-                    imageSrc={blog.frontmatter.img}
+                    imageSrc={blog.img}
                     isStatic
                     className="text-[#868562] dark:text-[#BBBAA6]"
                   >
-                    {blog.frontmatter.title}
+                    {blog.title}
                     <div className="flex items-center justify-between mt-4">
                       <div className="font-medium text-lg ml-2 text-[#14af40] dark:text-[#0ae448]">
-                        {blog.frontmatter.date}
+                        {blog.date}
                       </div>
                       <p className="font-normal text-base mr-5 text-[#14af40] dark:text-[#0ae448] xl:hidden flex items-center justify-center cursor-pointer">
                         Read More <ExternalLink className="ml-2" size={14} />
@@ -45,9 +47,12 @@ const Blogs = async () => {
                     </div>
                   </LinkPreview>
                 </div>
-                <p className="mr-5 text-[#14af40] dark:text-[#0ae448] max-xl:hidden flex items-center justify-center cursor-pointer">
+                <Link
+                  href={`/blogs/${blog.slug}`}
+                  className="mr-5 text-[#14af40] dark:text-[#0ae448] max-xl:hidden flex items-center justify-center cursor-pointer"
+                >
                   Read More <ExternalLink className="ml-2" size={14} />
-                </p>
+                </Link>
               </div>
               <hr />
             </div>
