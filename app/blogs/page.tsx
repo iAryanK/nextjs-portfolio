@@ -10,7 +10,7 @@ const Blogs = async () => {
 
   return (
     <div className="bg-white dark:bg-black">
-      <div className="max-w-7xl mx-auto  px-3 pt-28 scroll-pt-24">
+      <div className="max-w-7xl mx-auto px-3 mb-5 pt-28 scroll-pt-24">
         <BackgroundGradientAnimation
           containerClassName="h-28 sm:h-40 rounded-xl"
           size="24px"
@@ -22,7 +22,7 @@ const Blogs = async () => {
           </div>
         </BackgroundGradientAnimation>
 
-        <div className="mt-10">
+        <div className="mt-10 mb-10">
           {AllBlogs.map((blog: any, i: number) => (
             <div key={i}>
               <div className="flex items-center justify-between">

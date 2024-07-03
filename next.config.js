@@ -5,7 +5,7 @@ const withPWA = require('@ducanh2912/next-pwa').default({
     cacheOnFrontendNav: true,
     aggressiveFrontEndNavCaching: true,
     workboxOptions: {
-        disabledDevLogs: true,
+        disableDevLogs: true
     }
 })
 
@@ -22,4 +22,4 @@ const nextConfig = {
     }
 };
 
-module.exports = withMDX(withMDX(nextConfig))
+module.exports = withPWA(withMDX(nextConfig))
