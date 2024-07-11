@@ -3,7 +3,6 @@ import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Badge } from "@/components/ui/badge";
 import { socialMedia } from "@/data";
 import { Linkedin, LocateIcon, Mail, MapPin } from "lucide-react";
-import Image from "next/image";
 import Link from "next/link";
 import { FaGithub } from "react-icons/fa6";
 
@@ -39,9 +38,11 @@ const Page = () => {
           Student of Computer Science & Engineering | Aspiring SDE
         </p>
 
-        <p className="font-semibold text-lg mt-3 text-[#868562] dark:text-[#BBBAA6] flex items-center justify-start px-3 sm:px-5">
+        <p className="font-medium text-lg mt-3 flex items-center justify-start px-3 sm:px-5">
           <MapPin size={18} className="mr-2" />
-          Chandigarh Tricity, India
+          <p className="text-[#868562] dark:text-[#BBBAA6]">
+            Chandigarh Tricity, India
+          </p>
         </p>
 
         <div className="max-w-7xl mx-auto flex flex-wrap flex-col md:flex-row gap-8 mt-10 max-md:hidden px-5">

@@ -2,7 +2,7 @@
 
 import React, { useEffect, useState } from "react";
 import { Toggle } from "@/components/ui/toggle";
-import { Fullscreen, Minimize, Moon, Sun } from "lucide-react";
+import { Moon, Sun } from "lucide-react";
 import { useTheme } from "next-themes";
 
 const ThemeToggle = () => {

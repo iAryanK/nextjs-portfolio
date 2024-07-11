@@ -3,8 +3,6 @@ import { Poppins } from "next/font/google";
 import "@/app/globals.css";
 import { ThemeProvider } from "@/components/provider/theme-provider";
 import { Navbar } from "@/components/shared/Navbar";
-import MobileNav from "@/components/shared/MobileNav";
-import Image from "next/image";
 import Footer from "@/components/Footer";
 import { Toaster } from "@/components/ui/toaster";
 import InstallPrompt from "@/components/InstallPrompt";

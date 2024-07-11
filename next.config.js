@@ -1,5 +1,3 @@
-const withMDX = require('@next/mdx')()
-
 const withPWA = require('@ducanh2912/next-pwa').default({
     dest: 'public',
     cacheOnFrontendNav: true,
@@ -22,4 +20,4 @@ const nextConfig = {
     }
 };
 
-module.exports = withPWA(withMDX(nextConfig))
+module.exports = withPWA(nextConfig)
