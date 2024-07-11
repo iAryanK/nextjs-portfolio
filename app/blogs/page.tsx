@@ -1,7 +1,7 @@
 import { BackgroundGradientAnimation } from "@/components/aceternity/BgGradient";
 import { LinkPreview } from "@/components/aceternity/LinkPreview";
 import Divider from "@/components/shared/Divider";
-import { getAllBlogsMetadata, getBlogs } from "@/lib/actions/blog.action";
+import { getAllBlogsMetadata } from "@/lib/actions/blog.action";
 import { ExternalLink } from "lucide-react";
 import Link from "next/link";
 

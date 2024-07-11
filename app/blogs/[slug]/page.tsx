@@ -1,4 +1,4 @@
-import { getBlogBySlug, getBlogContent } from "@/lib/actions/blog.action";
+import { getBlogContent } from "@/lib/actions/blog.action";
 import Markdown from "react-markdown";
 import rehypeRaw from "rehype-raw";
 
