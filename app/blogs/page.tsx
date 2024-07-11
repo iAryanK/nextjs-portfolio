@@ -3,10 +3,26 @@ import { LinkPreview } from "@/components/aceternity/LinkPreview";
 import Divider from "@/components/shared/Divider";
 import { getAllBlogsMetadata } from "@/lib/actions/blog.action";
 import { ExternalLink } from "lucide-react";
+import { Metadata } from "next";
 import Link from "next/link";
 
+export const metadata: Metadata = {
+  title: "Blogs | Aryan",
+  description:
+    "Read the blogs that are written by me. Interweaved with informations and my practical knowledge, these blogs will definitely speak something new to you.",
+  openGraph: {
+    title: "Blogs | Aryan",
+    description:
+      "Read the blogs that are written by me. Interweaved with informations and my practical knowledge, these blogs will definitely speak something new to you.",
+    images: [
+      {
+        url: "https://www.iaryan.tech/opengraph-image.png",
+      },
+    ],
+  },
+};
+
 const Blogs = async () => {
-  // const AllBlogs = await getBlogs();
   const AllBlogs = await getAllBlogsMetadata();
 
   return (

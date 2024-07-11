@@ -3,8 +3,25 @@ import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Badge } from "@/components/ui/badge";
 import { socialMedia } from "@/data";
 import { Linkedin, LocateIcon, Mail, MapPin } from "lucide-react";
+import { Metadata } from "next";
 import Link from "next/link";
 import { FaGithub } from "react-icons/fa6";
+
+export const metadata: Metadata = {
+  title: "About Me | Aryan",
+  description:
+    "Read more about Aryan, a Computer Science undergraduate with a passion for programming, new technologies, and aspiring to become a Software Development Engineer.",
+  openGraph: {
+    title: "About Me | Aryan",
+    description:
+      "Read more about Aryan, a Computer Science undergraduate with a passion for programming, new technologies, and aspiring to become a Software Development Engineer.",
+    images: [
+      {
+        url: "https://www.iaryan.tech/opengraph-image.png",
+      },
+    ],
+  },
+};
 
 const Page = () => {
   return (
