@@ -54,7 +54,7 @@ export async function getBlogContent(slug: string) {
     {
       owner: "iaryank",
       repo: "blog-collections",
-      path: `${slug}.mdx`,
+      path: `blogs/${slug}.mdx`,
     }
   );
 

@@ -1,5 +1,4 @@
 import { getBlogBySlug, getBlogContent } from "@/lib/actions/blog.action";
-import { CustomMDX } from "@/mdx-components";
 import Markdown from "react-markdown";
 import rehypeRaw from "rehype-raw";
 
@@ -8,8 +7,6 @@ export default async function BlogPage({
 }: {
   params: { slug: string };
 }) {
-  // const blog = await getBlogBySlug(params.slug);
-
   const blog = await getBlogContent(params.slug);
 
   return (
