@@ -9,9 +9,9 @@ import {
   SheetContent,
   SheetTrigger,
 } from "@/components/ui/sheet";
-import Link from "next/link";
 import { navItems } from "@/data";
 import { cn } from "@/lib/utils";
+import { LinkTransition } from "next-link-transition";
 
 const MobileNav = () => {
   return (
@@ -30,7 +30,7 @@ const MobileNav = () => {
           <div>
             {navItems.map((navItem: any, idx: number) => (
               <SheetClose key={idx} asChild>
-                <Link
+                <LinkTransition
                   key={`link=${idx}`}
                   href={navItem.link}
                   className={cn(
@@ -41,7 +41,7 @@ const MobileNav = () => {
                   <span className="cursor-pointer text-2xl">
                     {navItem.name}
                   </span>
-                </Link>
+                </LinkTransition>
               </SheetClose>
             ))}
           </div>

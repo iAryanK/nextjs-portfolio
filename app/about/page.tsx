@@ -55,12 +55,12 @@ const Page = () => {
           Student of Computer Science & Engineering | Aspiring SDE
         </p>
 
-        <p className="font-medium text-lg mt-3 flex items-center justify-start px-3 sm:px-5">
+        <div className="font-medium text-lg mt-3 flex items-center justify-start px-3 sm:px-5">
           <MapPin size={18} className="mr-2" />
           <p className="text-[#868562] dark:text-[#BBBAA6]">
             Chandigarh Tricity, India
           </p>
-        </p>
+        </div>
 
         <div className="max-w-7xl mx-auto flex flex-wrap flex-col md:flex-row gap-8 mt-10 max-md:hidden px-5">
           <div className="border rounded-lg relative">

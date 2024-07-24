@@ -96,6 +96,47 @@
   }
 }
 
+body {
+  transition-property: opacity, background, filter, transform;
+  transition-timing-function: ease-in-out;
+  transition-duration: 1000ms;
+}
+
+.page-transition {
+  opacity: 0;
+  background: linear-gradient(135deg, #ff7e5f, #df7727, #ffc371);
+  filter: blur(8px);
+  transform: scale(0.95) rotate(-3deg);
+}
+
+/* Keyframe animations for a more dynamic transition */
+@keyframes scaleIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.9) rotate(-5deg);
+    filter: blur(10px);
+    background: linear-gradient(135deg, #ff7e5f, #df7727, #ffc371);
+  }
+
+  50% {
+    transform: scale(1.05) rotate(0deg);
+    filter: blur(3px);
+    background: linear-gradient(135deg, #ffc371, #ff7e5f, #df7727);
+  }
+
+  100% {
+    opacity: 1;
+    transform: scale(1) rotate(0deg);
+    filter: blur(0px);
+    background: linear-gradient(135deg, #df7727, #ff7e5f, #ffc371);
+  }
+}
+
+body.scale-transition {
+  animation: scaleIn 1s ease-in-out forwards;
+}
+
+
 @layer base {
   * {
     @apply border-border !scroll-smooth;

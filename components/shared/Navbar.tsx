@@ -7,12 +7,12 @@ import {
   ProductItem,
 } from "@/components/aceternity/NavbarMenu";
 import { cn } from "@/utils/cn";
-import Link from "next/link";
 import MobileNav from "./MobileNav";
 import { Home, Laptop2, Mail, NotebookText, Share2, User } from "lucide-react";
 import FullScreenToggle from "./FullScreenToggle";
 import ThemeToggle from "./ThemeToggle";
 import ShareButton from "../ShareButton";
+import { LinkTransition } from "next-link-transition";
 
 export function Navbar() {
   return (
@@ -34,33 +34,33 @@ function Navigationbar({ className }: { className?: string }) {
         )}
       >
         <div className="flex justify-between items-center">
-          <Link href="/">
+          <LinkTransition href="/">
             <h1 className="font-bold text-4xl max-md:py-4 text-black-100 dark:text-white">
               Aryan.
             </h1>
-          </Link>
+          </LinkTransition>
 
           <div className="hidden md:flex">
             <Menu setActive={setActive}>
-              <Link href="/">
+              <LinkTransition href="/">
                 <MenuItem
                   setActive={setActive}
                   active={active}
                   item="Home"
                   img={<Home size={18} />}
                 ></MenuItem>
-              </Link>
+              </LinkTransition>
 
-              <Link href="/about">
+              <LinkTransition href="/about">
                 <MenuItem
                   setActive={setActive}
                   active={active}
                   item="About"
                   img={<User size={18} />}
                 ></MenuItem>
-              </Link>
+              </LinkTransition>
 
-              <Link href="/projects">
+              <LinkTransition href="/projects">
                 <MenuItem
                   setActive={setActive}
                   active={active}
@@ -94,9 +94,9 @@ function Navigationbar({ className }: { className?: string }) {
                     />
                   </div>
                 </MenuItem>
-              </Link>
+              </LinkTransition>
 
-              <Link href="#contact">
+              <LinkTransition href="#contact">
                 <MenuItem
                   setActive={setActive}
                   active={active}
@@ -117,16 +117,16 @@ function Navigationbar({ className }: { className?: string }) {
                     <HoveredLink href="#contact">Contact Now</HoveredLink>
                   </div>
                 </MenuItem>
-              </Link>
+              </LinkTransition>
 
-              <Link href="/blogs">
+              <LinkTransition href="/blogs">
                 <MenuItem
                   setActive={setActive}
                   active={active}
                   item="Blogs"
                   img={<NotebookText size={18} />}
                 ></MenuItem>
-              </Link>
+              </LinkTransition>
             </Menu>
           </div>
 

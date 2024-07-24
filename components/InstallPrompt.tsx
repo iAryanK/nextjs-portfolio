@@ -36,10 +36,12 @@ const InstallPrompt = () => {
 
   return (
     <div
-      className={`bg-blue-800 rounded-t-md ${showPrompt ? "block" : "hidden"}`}
+      className={`bg-blue-500 dark:bg-blue-800 rounded-t-md ${
+        showPrompt ? "block" : "hidden"
+      }`}
     >
       <div className="flex items-center justify-between max-w-7xl mx-auto py-3 px-5 sm:px-10">
-        <div className="max-sm:hidden">
+        <div className="max-sm:hidden text-white">
           Install the app to get a native app experience on your PC !
         </div>
 
@@ -48,7 +50,7 @@ const InstallPrompt = () => {
           <p className="text-xs">Get a native app experience!</p>
         </div>
 
-        <Button className="h-8" onClick={handleInstallApp}>
+        <Button className="h-8 bg-white text-black" onClick={handleInstallApp}>
           Install
         </Button>
       </div>
