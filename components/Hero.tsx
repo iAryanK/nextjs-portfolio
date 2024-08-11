@@ -76,6 +76,7 @@ const Hero = () => {
             href="/assets/resume.pdf"
             className="max-md:mt-10 max-sm:w-full max-xs:px-5"
             target="_blank"
+            prefetch={false}
           >
             <MagicButton
               title="Resume"

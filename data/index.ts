@@ -1,10 +1,11 @@
-import { Home, Laptop2, Mail, NotebookText, User } from "lucide-react";
+import { Home, Laptop2, Mail, NotebookText, Rocket, User } from "lucide-react";
 import { FaGithub, FaLinkedinIn, FaXTwitter } from "react-icons/fa6";
 
 export const navItems = [
   { name: "Home", link: "/", icon: Home },
   { name: "About", link: "/about", icon: User },
   { name: "Projects", link: "/projects", icon: Laptop2 },
+  { name: "Services", link: "https://arcavian.iaryan.tech", icon: Rocket },
   { name: "Contact", link: "#contact", icon: Mail },
   { name: "Blogs", link: "/blogs", icon: NotebookText },
 ];

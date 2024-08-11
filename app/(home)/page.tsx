@@ -4,6 +4,7 @@ import Intro from "@/components/Intro";
 import Skills from "@/components/Skills";
 import Projects from "@/components/Projects";
 import Quote from "@/components/Quote";
+import Service from "@/components/Service";
 
 export default function Home() {
   return (
@@ -18,6 +19,7 @@ export default function Home() {
         <Skills />
         <Quote />
         <Projects className="max-md:mx-10" heading="Recent Project Works" />
+        <Service />
         <Testimonials />
       </div>
     </main>
