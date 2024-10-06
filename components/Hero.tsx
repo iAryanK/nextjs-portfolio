@@ -73,7 +73,7 @@ const Hero = () => {
           </h2>
 
           <Link
-            href="https://myinterviewtrainer.s3.ap-southeast-1.amazonaws.com/user_company_profiles/resumes/001/801/512/original/Aryan%27s_Resume.pdf?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAIDNNIRGHAQUQRWYA%2F20240905%2Fap-southeast-1%2Fs3%2Faws4_request&X-Amz-Date=20240905T082303Z&X-Amz-Expires=3600&X-Amz-SignedHeaders=host&X-Amz-Signature=aa777a0c03966af0c1442babf3da4a5ad6d55f5de8f5121bb39fce7eb117fdcd"
+            href="/assets/resume.pdf"
             className="max-md:mt-10 max-sm:w-full max-xs:px-5"
             target="_blank"
             prefetch={false}
