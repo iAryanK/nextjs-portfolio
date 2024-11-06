@@ -73,7 +73,7 @@ const Hero = () => {
           </h2>
 
           <Link
-            href="/assets/resume.pdf"
+            href="https://drive.google.com/file/d/1sGdbqimHZYk_k-XvF-ehNFzrvH_L2BS3/view?usp=sharing"
             className="max-md:mt-10 max-sm:w-full max-xs:px-5"
             target="_blank"
             prefetch={false}
