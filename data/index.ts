@@ -163,6 +163,20 @@ export const projects = [
     iconLists: ["/next.svg", "/tail.svg", "/ts.svg", "/fm.svg", "/gsap.svg"],
     link: "https://github.com/iAryanK/portfolio",
   },
+  {
+    id: 5,
+    title: "U-Combinator",
+    des: "U-Combinator is a place where one can find various projects to contribute. One can form a team of developers to complete their dream projects. To enlist a project, user has to login via github OAuth. The user can then then create a new project pitch with description and technology to be used, etc.",
+    img: "https://github.com/iAryanK/U-Combinator/raw/main/public/references/screenshot.png",
+    iconLists: [
+      "/next.svg",
+      "/sanity.svg",
+      "/ts.svg",
+      "/tail.svg",
+      "/shadcn-ui.svg",
+    ],
+    link: "https://github.com/iAryanK/U-Combinator",
+  },
 ];
 
 export const testimonials = [

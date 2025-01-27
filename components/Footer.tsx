@@ -32,7 +32,7 @@ const Footer = () => {
 
       <div className="flex mt-16 flex-row justify-between items-center max-w-7xl mx-auto sm:px-10 px-5 gbody">
         <p className="md:text-base text-sm md:font-normal font-light">
-          Copyright &copy; 2024 Aryan
+          Copyright &copy; {new Date().getFullYear()} Aryan
         </p>
 
         <div className="flex items-center gap-3">

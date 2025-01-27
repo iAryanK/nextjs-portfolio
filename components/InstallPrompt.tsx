@@ -50,7 +50,10 @@ const InstallPrompt = () => {
           <p className="text-xs">Get a native app experience!</p>
         </div>
 
-        <Button className="h-8 bg-white text-black" onClick={handleInstallApp}>
+        <Button
+          className="h-8 bg-white hover:bg-white/80 text-black"
+          onClick={handleInstallApp}
+        >
           Install
         </Button>
       </div>

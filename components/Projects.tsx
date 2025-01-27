@@ -61,7 +61,7 @@ const Projects = ({
     >
       <h2 className="heading pb-5 mb-20">{heading}</h2>
 
-      <div className="flex flex-col gap-10 gbody">
+      <div className="flex flex-col gap-10 gbody mb-16">
         {projects.map(({ id, title, des, img, iconLists, link }) => (
           <div
             key={id}
