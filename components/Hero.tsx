@@ -73,7 +73,7 @@ const Hero = () => {
           </h2>
 
           <Link
-            href="https://drive.google.com/file/d/1PtElss4hVfAmXi8Ma24PxQjjL3gGeXkq/view?usp=sharing"
+            href="https://drive.google.com/file/d/1_22O-5TEs8gUO_mb__3E7nPGNFmkryHz/view?usp=drivesdk"
             className="max-md:mt-10 max-sm:w-full max-xs:px-5"
             target="_blank"
             prefetch={false}
