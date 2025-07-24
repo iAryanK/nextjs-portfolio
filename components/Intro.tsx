@@ -69,8 +69,8 @@ const Intro = () => {
         <div className="max-sm:ml-3 font-semibold text-3xl lg:text-5xl">
           Hello! I am Aryan,
         </div>
-        <div className="text-2xl lg:text-4xl my-5 max-sm:ml-3">
-          <p className="leading-snug max-sm:font-light  text-[#868562] dark:text-[#BBBAA6]">
+        <div className="text-xl md:text-2xl lg:text-4xl my-5">
+          <p className="leading-snug max-sm:font-base text-[#868562] dark:text-[#BBBAA6] max-md:px-2 max-md:text-justify">
             A CS grad, currently pursuing M. Tech in Computer Science &
             Engineering from{" "}
             <strong>Indian Institute of Technology, Patna.</strong> With a
