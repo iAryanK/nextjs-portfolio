@@ -139,7 +139,7 @@ export const projects = [
       "/tail.svg",
       "/shadcn-ui.svg",
     ],
-    link: "https://github.com/iAryanK/U-Combinator",
+    link: "https://u-combinator.iaryan.me",
   },
   {
     id: 4,
@@ -153,7 +153,7 @@ export const projects = [
       "/images/icons/mongodb.svg",
       "/c.svg",
     ],
-    link: "https://devforces.tech",
+    link: "https://devforces.iaryan.me",
   },
   {
     id: 3,

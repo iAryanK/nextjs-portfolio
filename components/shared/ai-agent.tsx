@@ -52,14 +52,14 @@ const AI_Agent = () => {
           quality={10}
         />
       </DialogTrigger>
-      <DialogContent className="max-md:h-[95%] h-[60%] md:top-[60%] md:left-[70%] lg:left-[80%] xl:left-[85%] md:max-w-sm">
-        <div className="h-full w-full space-y-2">
-          <DialogHeader className="h-[10%]">
+      <DialogContent className=" md:top-[60%] md:left-[70%] lg:left-[80%] xl:left-[85%] md:max-w-sm">
+        <div className="max-md:h-[650px] h-[500px] w-full space-y-1">
+          <DialogHeader className="h-[10%] flex flex-col justify-center">
             <DialogTitle>Hey, I&apos;m Romanica</DialogTitle>
             <DialogDescription>Aryan&apos;s AI assistant.</DialogDescription>
           </DialogHeader>
 
-          <ScrollArea className="h-[500px] md:h-[350px] w-full flex flex-col items-center justify-start gap-4 border-t overflow-y-auto no-scrollbar pt-2">
+          <ScrollArea className="h-[78%] w-full flex flex-col items-center justify-start gap-4 border-t overflow-y-auto no-scrollbar pt-2">
             {messages.length === 0 && (
               <div className="flex flex-col items-center justify-center mt-10">
                 <Image
