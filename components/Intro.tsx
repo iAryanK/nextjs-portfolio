@@ -70,13 +70,18 @@ const Intro = () => {
           Hello! I am Aryan,
         </div>
         <div className="text-2xl lg:text-4xl my-5 max-sm:ml-3">
-          <p className="leading-snug max-sm:font-extralight  text-[#868562] dark:text-[#BBBAA6]">
-            A final-year Computer Science undergraduate pursuing a Bachelor of
-            Technology. With a passion for programming and a keen interest in
-            exploring new technologies, I am dedicated to continuous learning
-            and innovation. <br /> <br />
-            Aspiring to become a &apos;Software Development Engineer&apos;, my
-            goal is to leverage my skills to create impactful scalable systems.
+          <p className="leading-snug max-sm:font-light  text-[#868562] dark:text-[#BBBAA6]">
+            A CS grad, currently pursuing M. Tech in Computer Science &
+            Engineering from{" "}
+            <strong>Indian Institute of Technology, Patna.</strong> With a
+            passion for programming and a keen interest in exploring new
+            technologies, I am dedicated to continuous learning and innovation.{" "}
+            <br /> <br />
+            Working as a <strong>Full Stack Developer</strong> at a fast-paced
+            startup, building scalable systems that turn wild ideas into
+            reality.
+            <br />
+            Ready to be surprised? Stick around - I&apos;m just getting started.
           </p>
         </div>
         <Link href="/about">
@@ -84,7 +89,7 @@ const Intro = () => {
             title="Read More.."
             position="right"
             icon={<ChevronRight className="ml-3" />}
-            otherClasses="max-sm:w-full mt-5 mb-10"
+            otherClasses="max-sm:w-full mt-5 mb-10 shadow-none"
           />
         </Link>
       </div>

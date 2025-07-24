@@ -1,6 +1,7 @@
 import { BackgroundGradientAnimation } from "@/components/aceternity/BgGradient";
 import { LinkPreview } from "@/components/aceternity/LinkPreview";
 import Divider from "@/components/shared/Divider";
+import { importantLinks } from "@/data";
 import { getAllBlogsMetadata } from "@/lib/actions/blog.action";
 import { ExternalLink } from "lucide-react";
 import { Metadata } from "next";
@@ -16,7 +17,7 @@ export const metadata: Metadata = {
       "Read the blogs that are written by me. Interweaved with informations and my practical knowledge, these blogs will definitely speak something new to you.",
     images: [
       {
-        url: "https://www.iaryan.tech/opengraph-image.png",
+        url: `${importantLinks.portfolioWebsite}/opengraph-image.png`,
       },
     ],
   },

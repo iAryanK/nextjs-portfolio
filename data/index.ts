@@ -1,11 +1,19 @@
 import { Home, Laptop2, Mail, NotebookText, Rocket, User } from "lucide-react";
 import { FaGithub, FaLinkedinIn, FaXTwitter } from "react-icons/fa6";
 
+export const importantLinks = {
+  portfolioWebsite: "https://www.iaryan.me",
+  portfolioVercelUrl: "https://www.engr-aryan.vercel.app",
+  Resume:
+    "https://drive.google.com/file/d/11gdpvGi4gXDGBu18Ga4R2lXfZKhGziAK/view?usp=sharing",
+  Services: "https://arcavian.iaryan.me",
+};
+
 export const navItems = [
   { name: "Home", link: "/", icon: Home },
   { name: "About", link: "/about", icon: User },
   { name: "Projects", link: "/projects", icon: Laptop2 },
-  { name: "Services", link: "https://arcavian.iaryan.tech", icon: Rocket },
+  { name: "Services", link: importantLinks.Services, icon: Rocket },
   { name: "Contact", link: "#contact", icon: Mail },
   { name: "Blogs", link: "/blogs", icon: NotebookText },
 ];
@@ -120,7 +128,21 @@ export const OtherSkills = [
 
 export const projects = [
   {
-    id: 1,
+    id: 5,
+    title: "U-Combinator",
+    des: "U-Combinator is a place where one can find various projects to contribute. One can form a team of developers to complete their dream projects. To enlist a project, user has to login via github OAuth. The user can then then create a new project pitch with description and technology to be used, etc.",
+    img: "https://github.com/iAryanK/U-Combinator/raw/main/public/references/screenshot.png",
+    iconLists: [
+      "/next.svg",
+      "/sanity.svg",
+      "/ts.svg",
+      "/tail.svg",
+      "/shadcn-ui.svg",
+    ],
+    link: "https://github.com/iAryanK/U-Combinator",
+  },
+  {
+    id: 4,
     title: "DevForces",
     des: "DevForces, a Next.JS 14 Full Stack application, is a community driven platform that enables us to ask questions, get answered by others and answer other's questions as well. It also provides us the facility to write beautiful blog articles and post it on DevForces. This peace of work is inspired from the application DevOverflow by javascriptmastery, who helped me create this mega project with highly detailed features.",
     img: "https://github.com/iAryanK/DevOverflow/raw/main/app/opengraph-image.png?raw=true",
@@ -134,7 +156,7 @@ export const projects = [
     link: "https://devforces.tech",
   },
   {
-    id: 2,
+    id: 3,
     title: "UniPort",
     des: " Uniport serves as a single port where users can seamlessly access and utilize different AI functionalities to enhance their workflows and creative endeavors, hence the name Uniport. The project leverages cutting-edge technologies such as Next.js 14 for both backend and frontend development, React for dynamic user interfaces, Tailwind CSS for sleek and responsive design, and Prisma for seamless connectivity with a MySQL database hosted on Aiven.",
     img: "https://github.com/iAryanK/Uniport/raw/main/public/screenshots/landing.png?raw=true",
@@ -148,7 +170,7 @@ export const projects = [
     link: "https://uniport.vercel.app",
   },
   {
-    id: 3,
+    id: 2,
     title: "WhatsFlow",
     des: "A desktop application that sends bulk messages on whatsapp. WhatsFlow is a highly efficient bulk message sender due to its unique algorithm for sending message. Also, the application has some features that makes it stand out from others.",
     img: "https://github.com/iAryanK/WhatsFlow/raw/main/screenshots/ui_light.png?raw=true",
@@ -156,26 +178,12 @@ export const projects = [
     link: "https://github.com/iAryanK/WhatsFlow",
   },
   {
-    id: 4,
+    id: 1,
     title: "Personal Portfolio",
     des: "None other than the website you are surfing right now! This website respresents my personal portfolio - who I am, My skills, project works and contact details with some blogs that is weaved with my knowledge and information. If this website feels amazing to you, you should try using technologies like Next JS, tailwind CSS, Aceternity UI, shadcn UI and my favourite, GSAP for animations.",
     img: "/images/portfolio-project.png",
     iconLists: ["/next.svg", "/tail.svg", "/ts.svg", "/fm.svg", "/gsap.svg"],
     link: "https://github.com/iAryanK/portfolio",
-  },
-  {
-    id: 5,
-    title: "U-Combinator",
-    des: "U-Combinator is a place where one can find various projects to contribute. One can form a team of developers to complete their dream projects. To enlist a project, user has to login via github OAuth. The user can then then create a new project pitch with description and technology to be used, etc.",
-    img: "https://github.com/iAryanK/U-Combinator/raw/main/public/references/screenshot.png",
-    iconLists: [
-      "/next.svg",
-      "/sanity.svg",
-      "/ts.svg",
-      "/tail.svg",
-      "/shadcn-ui.svg",
-    ],
-    link: "https://github.com/iAryanK/U-Combinator",
   },
 ];
 

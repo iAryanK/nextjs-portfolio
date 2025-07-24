@@ -1,7 +1,7 @@
 import { BackgroundGradientAnimation } from "@/components/aceternity/BgGradient";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Badge } from "@/components/ui/badge";
-import { socialMedia } from "@/data";
+import { importantLinks, socialMedia } from "@/data";
 import { Linkedin, LocateIcon, Mail, MapPin } from "lucide-react";
 import { Metadata } from "next";
 import Link from "next/link";
@@ -17,7 +17,7 @@ export const metadata: Metadata = {
       "Read more about Aryan, a Computer Science undergraduate with a passion for programming, new technologies, and aspiring to become a Software Development Engineer.",
     images: [
       {
-        url: "https://www.iaryan.tech/opengraph-image.png",
+        url: `${importantLinks.portfolioWebsite}/opengraph-image.png`,
       },
     ],
   },
@@ -52,14 +52,12 @@ const Page = () => {
         </div>
 
         <p className="ml-3 max-md:mt-5 md:ml-5 text-xl font-semibold">
-          Student of Computer Science & Engineering | Aspiring SDE
+          M.Tech in CSE&apos;27 @IIT Patna | Full Stack Developer | Programmer
         </p>
 
         <div className="font-medium text-lg mt-3 flex items-center justify-start px-3 sm:px-5">
           <MapPin size={18} className="mr-2" />
-          <p className="text-[#868562] dark:text-[#BBBAA6]">
-            Chandigarh Tricity, India
-          </p>
+          <p className="text-[#868562] dark:text-[#BBBAA6]">Jharkhand, India</p>
         </div>
 
         <div className="max-w-7xl mx-auto flex flex-wrap flex-col md:flex-row gap-8 mt-10 max-md:hidden px-5">
@@ -121,29 +119,49 @@ const Page = () => {
               About me
             </Badge>
             <div className="max-w-6xl mx-auto blogContent py-7 pl-3 pr-2">
-              <div className="paraHead">Hello there!</div>I am a Computer
-              Science Undergraduate, currently pursuing the degree of Bachelor
-              of Technology. I am in last year of my four years course duration.{" "}
-              <br />
-              After completing my schooling till XII standard, I took admission
-              in{" "}
+              <div className="paraHead">Hello there!</div>I am a B. Tech
+              CSE&apos;25 graduate, currently pursuing the degree of Master of
+              Technology in Computer Science & Engineering from{" "}
               <span className="highlight">
-                I K Gujral Punjab Technical University
-              </span>
-              , which is in located Punjab. I am doing B.Tech in computer
-              Science and Engineering (CSE), which is fortunately in my realm of
-              keen interest. Aspiring to become a{" "}
-              <span className="highlight">Software Development Engineer</span>,
-              I also love{" "}
-              <span className="highlight">
-                Robotics and Artificial Intelligence(AI).
-              </span>
+                Indian Institute of Technology, Patna.
+              </span>{" "}
+              <br />I am a <strong>Full Stack Developer</strong> at a fast-paced
+              Hyderabad based startup, building scalable systems that turn wild
+              ideas into reality. <br />
+              {/* Experience Section */}
+              <div className="paraHead">Experience</div>
+              My Experience are as shown below:-
+              <div className="paraHeadSecondary">- Full Stack Developer</div>
+              Working as <span className="highlight">FSD</span> in Ezwiiz
+              Frontier Systems(EFS, Hyderabad). <br />
+              <em>August 2025 - Present</em>
+              <div className="paraHeadSecondary">
+                - Full Stack Developer Intern
+              </div>
+              Worked as <span className="highlight">FSD Intern</span> at Ezwiiz
+              Frontier Systems(EFS, Hyderabad), <br />
+              <em>April 2025 - July 2025</em>
+              <div className="paraHeadSecondary">
+                - Software Developer Intern
+              </div>
+              Worked as <span className="highlight">SDE Intern</span> at 75way
+              technologies, Mohali, Punjab. <br />
+              <em>January 2025 - March 2025</em>
+              {/* Academic qualifications Section */}
               <div className="paraHead">Academic qualifications</div>
               My Academic qualifications are as shown below:-
+              <div className="paraHeadSecondary">- M.tech</div>
+              Pursuing M.Tech in Computer Science & Engineering from{" "}
+              <strong className="highlight">
+                Indian Institute of Technology, Patna.
+              </strong>
+              <br />
+              <em>July 2025- June 2027</em>
               <div className="paraHeadSecondary">- B.tech</div>
-              Secured <strong className="highlight">CGPA 9.5</strong> in till
-              fifth semester of Engineering from my college I K Gujral Punjab
-              Technical University.
+              Secured <strong className="highlight">CGPA 9.5</strong> in B. Tech
+              CSE from my college I K Gujral Punjab Technical University.
+              <br />
+              <em>Aug 2021- July 2025</em>
               <div className="paraHeadSecondary">- Class XII </div>
               Secured <strong className="highlight">percentage 87.6</strong> in
               standard XII in the year 2019 from my school{" "}
@@ -156,6 +174,7 @@ const Page = () => {
               <strong className="highlight">
                 Indian Council of Secondary Education(ICSE).
               </strong>
+              {/* Achievements  */}
               <div className="paraHead">Achievements</div>
               My list of achievements till date are as under:-
               <div className="paraHeadSecondary">
@@ -171,30 +190,39 @@ const Page = () => {
               deployed various WebSites using{" "}
               <strong className="highlight">Next JS 14</strong>, a React JS
               framework.
+              {/* Skills  */}
               <div className="paraHead">Skills</div>- My technical skills
               include <strong className="highlight">programming.</strong> <br />
               - I have proficiency in languages like{" "}
               <strong className="highlight">
                 Typescript, Python, Java, C++ and C.
               </strong>{" "}
+              <br />- Comfortable in interacting with both{" "}
+              <strong className="highlight">SQL</strong> &{" "}
+              <strong className="highlight">No-SQL</strong> databases.
               <br />- IT constructs include{" "}
               <strong className="highlight">
-                Data Structures and Algorithms
+                Data Structures and Algorithms,
               </strong>{" "}
-              and{" "}
               <strong className="highlight">
                 Object oriented programming system
               </strong>{" "}
+              and <strong className="highlight">Operating Systems.</strong>{" "}
               <br />- The technology I have worked on is{" "}
+              <strong>Full Stack Web Development</strong> using{" "}
               <strong className="highlight">
-                Full Stack Web Development using Next JS 14.
+                Next JS 14/15, MERN Stack, React Native,
               </strong>{" "}
-              My project works and github profile is a sound proof of my best
-              works. Currently, I am working on creating{" "}
-              <strong className="highlight">scalable systems.</strong> <br />-
-              The development tool that i am use to is{" "}
-              <strong className="highlight">Visual Studio Code</strong>. <br />-
-              Other skills are: I am a{" "}
+              etc.
+              <br />
+              My project works and{" "}
+              <strong>
+                <Link href={socialMedia[1].link}>github profile</Link>
+              </strong>{" "}
+              is a sound proof of my best works.
+              <br />- The development tool that i am use to are{" "}
+              <strong className="highlight">Cursor & Visual Studio Code</strong>
+              . <br />- Other skills are: I am a{" "}
               <strong className="highlight">fast learner</strong>,{" "}
               <strong className="highlight">consistent</strong> in my work and{" "}
               <strong className="highlight">punctual</strong>.
@@ -206,8 +234,8 @@ const Page = () => {
                 data Structures and Algorithms
               </strong>
               . Believe me or not, fortunately my hobby is programming. Aspiring
-              to become Software Development Engineer, I am also enthusiastic
-              about{" "}
+              to become a highly skilled developer & programmer, I am also
+              enthusiastic about{" "}
               <strong className="highlight">
                 Robotics and Machine Learning
               </strong>

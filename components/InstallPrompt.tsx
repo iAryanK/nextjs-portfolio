@@ -35,27 +35,25 @@ const InstallPrompt = () => {
   };
 
   return (
-    <div
-      className={`bg-blue-500 dark:bg-blue-800 rounded-t-md ${
-        showPrompt ? "block" : "hidden"
-      }`}
-    >
-      <div className="flex items-center justify-between max-w-7xl mx-auto py-3 px-5 sm:px-10">
-        <div className="max-sm:hidden text-white">
-          Install the app to get a native app experience on your PC !
-        </div>
+    <div className={`${showPrompt ? "block" : "hidden"} p-2 mx-auto`}>
+      <div className={`bg-blue-500 dark:bg-blue-800 rounded-md`}>
+        <div className="flex items-center justify-between max-w-7xl mx-auto py-3 px-5 sm:px-8">
+          <div className="max-sm:hidden text-white">
+            Install the app to get a native app experience on your device !
+          </div>
 
-        <div className="sm:hidden">
-          <p className="font-semibold text-base">Add to home screen</p>
-          <p className="text-xs">Get a native app experience!</p>
-        </div>
+          <div className="sm:hidden">
+            <p className="font-semibold text-base">Add to home screen</p>
+            <p className="text-xs">Get a native app experience!</p>
+          </div>
 
-        <Button
-          className="h-8 bg-white hover:bg-white/80 text-black"
-          onClick={handleInstallApp}
-        >
-          Install
-        </Button>
+          <Button
+            className="h-8 bg-white hover:bg-white/80 text-black"
+            onClick={handleInstallApp}
+          >
+            Install
+          </Button>
+        </div>
       </div>
     </div>
   );

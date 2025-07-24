@@ -6,6 +6,8 @@ import { Navbar } from "@/components/shared/Navbar";
 import Footer from "@/components/Footer";
 import { Toaster } from "@/components/ui/toaster";
 import InstallPrompt from "@/components/InstallPrompt";
+import AI_Agent from "@/components/shared/ai-agent";
+import { importantLinks } from "@/data";
 
 const poppins = Poppins({
   subsets: ["latin"],
@@ -15,7 +17,7 @@ const poppins = Poppins({
 
 export const metadata: Metadata = {
   manifest: "/manifest.json",
-  metadataBase: new URL("https://www.iaryan.tech"),
+  metadataBase: new URL(importantLinks.portfolioWebsite),
   title: "Aryan | Portfolio",
   description:
     "Welcome to Aryan's portfolio website. Discover my projects, skills, and professional journey. View my resume and contact me for services.",
@@ -25,7 +27,7 @@ export const metadata: Metadata = {
       "Welcome to Aryan's portfolio website. Discover my projects, skills, and professional journey. View my resume and contact me for services.",
     images: [
       {
-        url: "https://www.iaryan.tech/opengraph-image.png",
+        url: `${importantLinks.portfolioWebsite}/opengraph-image.png`,
       },
     ],
   },
@@ -53,6 +55,9 @@ export default function RootLayout({
           {children}
           <Footer />
           <InstallPrompt />
+          <div className="fixed bottom-5 right-5">
+            <AI_Agent />
+          </div>
           <Toaster />
         </ThemeProvider>
       </body>

@@ -1,6 +1,7 @@
 import { Share2 } from "lucide-react";
 import React from "react";
 import { toast } from "./ui/use-toast";
+import { importantLinks } from "@/data";
 
 const ShareButton = ({ className }: { className?: string }) => {
   const handleShare = () => {
@@ -14,7 +15,7 @@ const ShareButton = ({ className }: { className?: string }) => {
     return navigator.share({
       title: "Aryan | Portfolio",
       text: "Visit now, to explore this portfolio.",
-      url: "https://www.iaryan.tech",
+      url: importantLinks.portfolioWebsite,
     });
   };
 

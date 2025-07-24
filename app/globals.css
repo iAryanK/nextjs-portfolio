@@ -69,16 +69,23 @@
   ::-webkit-scrollbar {
     width: 13px;
   }
+  .no-scrollbar::-webkit-scrollbar {
+    width: 0px;
+  }
 
   /* Track */
   ::-webkit-scrollbar-track {
-    background: linear-gradient(180deg, rgba(152, 227, 8, 1) 0%, rgba(255, 255, 255, 1) 100%);
+    background: linear-gradient(
+      180deg,
+      rgba(152, 227, 8, 1) 0%,
+      rgba(255, 255, 255, 1) 100%
+    );
   }
 
   /* Handle */
   ::-webkit-scrollbar-thumb {
     /* background: rgb(183, 180, 234); */
-    background-image: url('/images/juicy-rocket.gif');
+    background-image: url("/images/juicy-rocket.gif");
     background-position: center bottom, center -40px;
     background-repeat: no-repeat, no-repeat;
     background-size: cover;
@@ -87,7 +94,7 @@
 
   /* Handle on hover */
   ::-webkit-scrollbar-thumb:hover {
-    transform: scale(1.5)
+    transform: scale(1.5);
   }
 
   .bg-clip-text {
@@ -136,7 +143,6 @@ body.scale-transition {
   animation: scaleIn 1s ease-in-out forwards;
 }
 
-
 @layer base {
   * {
     @apply border-border !scroll-smooth;
@@ -152,7 +158,6 @@ body.scale-transition {
 }
 
 @layer utilities {
-
   .heading {
     @apply font-bold text-5xl md:text-7xl text-center bg-gradient-to-t from-yellow-500 to-yellow-200 dark:from-yellow-300 dark:to-yellow-50 bg-clip-text text-transparent select-none;
   }
@@ -162,27 +167,26 @@ body.scale-transition {
   }
 
   .paraHead {
-    @apply mt-8 mb-5 font-semibold text-2xl text-black dark:text-white
+    @apply mt-8 mb-5 font-semibold text-2xl text-black dark:text-white;
   }
 
   .paraHeadSecondary {
-    @apply mt-5 mb-3 font-semibold text-xl text-black dark:text-white
+    @apply mt-5 mb-3 font-semibold text-xl text-black dark:text-white;
   }
 
   .blogHead {
-    @apply mt-8 mb-5 font-semibold text-2xl md:text-4xl text-black dark:text-white
+    @apply mt-8 mb-5 font-semibold text-2xl md:text-4xl text-black dark:text-white;
   }
 
   .blogHeadSecondary {
-    @apply mt-5 mb-3 font-semibold text-xl md:text-2xl text-black dark:text-white
+    @apply mt-5 mb-3 font-semibold text-xl md:text-2xl text-black dark:text-white;
   }
 
   .highlight {
-    @apply font-semibold text-[#14af40] dark:text-[#0ae448]
+    @apply font-semibold text-[#14af40] dark:text-[#0ae448];
   }
 
   .blogContent {
-    @apply leading-relaxed text-lg text-[#868562] dark:text-[#BBBAA6]
+    @apply leading-relaxed text-lg text-[#868562] dark:text-[#BBBAA6];
   }
-
 }

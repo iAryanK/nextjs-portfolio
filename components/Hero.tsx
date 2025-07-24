@@ -9,6 +9,7 @@ import { MagicButton } from "./aceternity/StyledButton";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import ShareButton from "./ShareButton";
+import { importantLinks } from "@/data";
 
 const Hero = () => {
   const imgRef = useRef(null);
@@ -73,7 +74,7 @@ const Hero = () => {
           </h2>
 
           <Link
-            href="https://drive.google.com/file/d/11gdpvGi4gXDGBu18Ga4R2lXfZKhGziAK/view?usp=sharing"
+            href={importantLinks.Resume}
             className="max-md:mt-10 max-sm:w-full max-xs:px-5"
             target="_blank"
             prefetch={false}

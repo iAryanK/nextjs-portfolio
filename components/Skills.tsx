@@ -66,10 +66,10 @@ const Skills = () => {
       <div className="my-10 gbody">
         <Accordion type="single" collapsible className="w-full">
           <AccordionItem value="item-1">
-            <AccordionTrigger className="text-4xl md:text-5xl">
+            <AccordionTrigger className="text-3xl md:text-4xl">
               Frontend
             </AccordionTrigger>
-            <AccordionContent className="flex flex-col justify-center items-center max-w-3xl m-auto gap-4">
+            <AccordionContent className="flex flex-col justify-center items-center max-w-4xl m-auto gap-4">
               {FrontendSkills.map(({ id, img, skill, value }) => (
                 <div
                   key={id}
@@ -98,10 +98,10 @@ const Skills = () => {
           </AccordionItem>
 
           <AccordionItem value="item-2">
-            <AccordionTrigger className="text-4xl md:text-5xl">
+            <AccordionTrigger className="text-3xl md:text-4xl">
               Backend
             </AccordionTrigger>
-            <AccordionContent className="flex flex-col justify-center items-center max-w-3xl m-auto gap-4">
+            <AccordionContent className="flex flex-col justify-center items-center max-w-4xl m-auto gap-4">
               {backendSkills.map(({ id, img, skill, value }) => (
                 <div
                   key={id}
@@ -130,10 +130,10 @@ const Skills = () => {
           </AccordionItem>
 
           <AccordionItem value="item-3">
-            <AccordionTrigger className="text-4xl md:text-5xl">
+            <AccordionTrigger className="text-3xl md:text-4xl">
               Languages
             </AccordionTrigger>
-            <AccordionContent className="flex flex-col justify-center items-center max-w-3xl m-auto gap-4">
+            <AccordionContent className="flex flex-col justify-center items-center max-w-4xl m-auto gap-4">
               {languageSkills.map(({ id, img, skill, value }) => (
                 <div
                   key={id}
@@ -162,10 +162,10 @@ const Skills = () => {
           </AccordionItem>
 
           <AccordionItem value="item-4">
-            <AccordionTrigger className="text-4xl md:text-5xl">
+            <AccordionTrigger className="text-3xl md:text-4xl">
               Others
             </AccordionTrigger>
-            <AccordionContent className="flex flex-col justify-center items-center max-w-3xl m-auto gap-4">
+            <AccordionContent className="flex flex-col justify-center items-center max-w-4xl m-auto gap-4">
               {OtherSkills.map(({ id, img, skill, value }) => (
                 <div
                   key={id}

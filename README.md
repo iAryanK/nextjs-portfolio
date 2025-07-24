@@ -5,5 +5,5 @@
     </a>
   <br />
 
-  <h3 align="center">Visit my <a href="https://www.iaryan.tech/" target="_blank"><b>Personal Portfolio</b></a></h3>
+  <h3 align="center">Visit my <a href="https://www.iaryan.me/" target="_blank"><b>Personal Portfolio</b></a></h3>
 </div>

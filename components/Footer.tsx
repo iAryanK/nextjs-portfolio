@@ -2,12 +2,13 @@ import React from "react";
 import { socialMedia } from "@/data";
 import { ContactDrawerDialog } from "./ContactDialog";
 import Link from "next/link";
+import InstallPrompt from "./InstallPrompt";
 
 const Footer = () => {
   return (
     <footer
       id="contact"
-      className="max-w-full mx-auto pt-16 pb-10 relative bg-white dark:bg-black "
+      className="max-w-full mx-auto pt-16 pb-2 relative bg-white dark:bg-black "
     >
       <div
         className="h-[90vh] sm:h-screen w-full
