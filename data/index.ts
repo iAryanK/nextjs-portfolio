@@ -5,7 +5,7 @@ export const importantLinks = {
   portfolioWebsite: "https://www.iaryan.me",
   portfolioVercelUrl: "https://www.engr-aryan.vercel.app",
   Resume:
-    "https://drive.google.com/file/d/1SSgyQTwqAQU-iE_ZlF_Jk8CoIZkR-Hlw/view?usp=sharing",
+    "https://drive.google.com/file/d/1B1X21gtLkX9y0clYo63n8WWegXfk5yRF/view?usp=sharing",
   Services: "https://arcavian.iaryan.me",
 };
 
