@@ -2,11 +2,11 @@ import { Home, Laptop2, Mail, NotebookText, Rocket, User } from "lucide-react";
 import { FaGithub, FaLinkedinIn, FaXTwitter } from "react-icons/fa6";
 
 export const importantLinks = {
-  portfolioWebsite: "https://www.iaryan.me",
-  portfolioVercelUrl: "https://www.engr-aryan.vercel.app",
+  portfolioWebsite: "https://iaryank.vercel.app",
+  portfolioVercelUrl: "https://iaryank.vercel.app",
   Resume:
     "https://drive.google.com/file/d/1B1X21gtLkX9y0clYo63n8WWegXfk5yRF/view?usp=sharing",
-  Services: "https://arcavian.iaryan.me",
+  Services: "https://arcavian.vercel.app",
 };
 
 export const navItems = [
